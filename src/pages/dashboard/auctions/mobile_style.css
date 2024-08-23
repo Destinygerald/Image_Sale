@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+	.auctions-cnt {
+		padding-right: 0;
+	}
+
+	.auctions-grid {
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	}
+
+	.auctions-cnt::-webkit-scrollbar {
+		display: none;
+	}
+}

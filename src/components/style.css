@@ -1,0 +1,37 @@
+.msg {
+	width: 24%;
+	min-height: 40px;
+	background-color: white;
+	border-radius: 4px;
+	position: absolute;
+	top: 0;
+	margin-left: 14%;
+	margin-top: 20px;
+	padding: 4px 12px;
+	line-height: .8rem;
+}
+
+.msg-hide {
+	display: none;
+}
+
+.msg-exit {
+	position: absolute;
+	top: 4px;
+	right: 2px;
+	cursor: pointer;
+}
+
+.msg-info {
+	font-family: sans-serif;
+	font-size: .72rem;
+	font-weight: 500;
+}
+
+.failure {
+	color: var(--err);
+}
+
+.success {
+	color: var(--succ);
+}

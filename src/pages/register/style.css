@@ -1,0 +1,161 @@
+.logger {
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(var(--bg));
+	position: fixed;
+	z-index: 1;
+}
+
+.logger-right {
+	width: 45%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: var(--primary);
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%, 5% 50%);
+	object-fit: cover;
+}
+
+.logger-right > img {
+	height: 100%;
+	width: 100%;
+	filter: sepia(20%);
+	/*image-rendering: pixelated;*/
+}
+
+.logger-right::after {
+	content: '';
+	position: absolute;
+	width: 48px;
+	height: 100%;
+	background-color: var(--secondary);
+	left: 0%;
+	top: 0;
+	border: none;
+	clip-path: polygon(0 0, 50% 0, 100% 50%, 50% 100%, 0% 100%);
+}
+
+.logger-main {
+	width: 50%;
+	padding-left: 10%;
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	padding-top: 80px;
+	color: rgb(240, 240, 240);
+	position: relative;
+}
+
+.reg-form {
+	width: 80%;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.back {
+	position: absolute;
+	top: 40px;
+	left: 24%;
+	padding: 4px 6px;
+	cursor: pointer;
+	/*background-color: rgb(60, 60, 60, .3);*/
+	/*border-radius: 4px;*/
+}
+
+.reg-form > div:first-child {
+	font-size: 1.52rem;
+}
+
+.reg-form > form {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.reg-input {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	gap: 2px;
+}
+
+.reg-input > input, .reg-form > form > input {
+	/*background-color: transparent;*/
+	background-color: rgb(235, 235, 235);
+	border: none;
+	padding: 10px 16px;
+	font-size: .72rem;
+	border-radius: 2px;
+	outline: none;
+}
+
+.reg-err {
+	font-size: .5rem;
+	font-family: sans-serif;
+	font-weight: 400;
+	letter-spacing: .5px;
+	color: var(--err);
+}
+
+.reg-form > form > button {
+	padding: 10px;
+	cursor: pointer;
+	font-family: Oswald;
+	border: none;
+	font-size: .8rem;
+	font-weight: 400;
+	letter-spacing: 1px;
+	margin-top: 16px;
+	border-radius: 4px;
+	background-color: rgb(80, 80, 45);
+	color: white;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+}
+
+.reg-redir {
+	font-size: .6rem;
+	font-weight: 200;
+	letter-spacing: 1px;
+	align-self: center;
+	/*margin-top: -2px;*/
+	cursor: pointer;
+}
+
+
+.loading > div {
+	width: 22px;
+	height: 22px;
+	background: conic-gradient(transparent, white);
+	align-self: center;
+	border-radius: 50%;
+	position: relative;
+	animation: load .8s ease-in-out infinite;
+}
+
+@keyframes load {
+	from {
+		rotate: 0;
+	}
+
+	to {
+		rotate: 360deg;
+	}
+}
+
+
+.loading > div::after {
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	background-color: var(--secondary);
+	content: '';
+	top: 0;
+	left: 0;
+	translate: 2px 2px;
+	border-radius: 50%;
+}

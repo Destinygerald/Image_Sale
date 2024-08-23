@@ -1,0 +1,256 @@
+.dashboard {
+	position: fixed;
+	z-index: 2;
+	width: 100vw;
+	height: 100svh;
+	background-color: rgb(var(--bg));
+	display: flex;
+	overflow: hidden;
+}
+
+.navbar {
+	display: none;
+}
+
+.slider {
+	display: none;
+}
+
+.sidebar {
+	/*position: absolute;*/
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 228px;
+	height: 100%;
+	background-color: rgb(var(--bg));
+	/*align-items: center;*/
+	display: flex;
+	flex-direction: column;
+	padding: 28px 0;
+	padding-right: 32px;
+	gap: 40px;
+	z-index: 3;
+}
+
+.sdb-logo {
+	color: rgb(240, 240, 240, .7);
+	font-size: 1.4rem;
+	display: flex;
+	gap: 8px;
+	padding: 0 40px;
+}
+
+.sdb-logo > span:first-child {
+	letter-spacing: -4px;
+}
+
+.sdb-items {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	color: white;
+	gap: 12px;
+}
+
+.sdb-option, .selected {
+	/*width: 60%;*/
+	cursor: pointer;
+	/*background-color: blue;*/
+	position: relative;
+	padding: 10px 40px;
+	border-top-right-radius: 6px;
+	border-bottom-right-radius: 6px;
+	display: flex;
+	gap: 12px;
+	align-items: center;
+	font-weight: 400;
+	font-size: .88rem;
+}
+
+.sdb-option > span:last-child {
+	font-size: .68rem;
+}
+
+.sdb-option:hover {
+	background-color: rgb(75, 75, 75, .1);
+}
+
+.selected:hover {
+	background-color: var(--primary);
+}
+
+.selected {
+	background-color: var(--primary);
+	color: rgb(var(--bg));
+	font-weight: 500;
+}
+
+.topnav {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.top-search {
+	position: relative;
+	width: 40%;
+}
+
+.top-search > input {
+	padding: 8px 16px;
+	height: 32px;
+	background-color: rgb(var(--bg-light));
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	width: 100%;
+	color: rgb(var(--text-grey));
+	font-size: .8rem;
+}
+
+.search-icon {
+	position: absolute;
+	right: 0;
+	top: 0;
+	translate: 0 0%;
+	padding: 8px;
+	color: white;
+	font-size: .8rem;
+	cursor: pointer;
+}
+
+.top-right {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+}
+
+.top-notification, .top-profile > div:first-child {
+	width: 32px;
+	height: 32px;
+	background-color: rgb(var(--bg-light));
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: .88rem;
+	color: rgb(var(--text-grey), .5);
+	cursor: pointer;
+}
+
+
+.top-profile {
+	display: flex;
+	align-items: center;
+	font-size: .56rem;
+	font-weight: 600;
+	color: rgb(var(--text-grey));
+	gap: 4px;
+	background-color: rgb(var(--bg-light), .3);
+	border-radius: 4px;
+	font-family: sans-serif;
+	cursor: pointer;
+}
+
+.top-profile > div:last-child {
+	padding: 2px 10px;
+}
+
+.dashboard-main {
+	width: calc(100% - 228px);
+	height: calc(100% - 32px);
+	background-color: rgb(var(--bg2));
+	align-self: flex-end;
+	padding: 16px 28px;
+	border-top-left-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	position: relative;
+}
+
+.dashboard-main > .not-found {
+	background-color: rgb(var(--bg2)) !important;
+	width: 100% !important;
+}
+
+
+.popup {
+	position: absolute;
+	width: 68%;
+	height: 80%;
+	background-color: rgb(var(--bg));
+	z-index: 2;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	border-radius: 12px;
+	box-shadow: 0 0 2px rgb(220, 220, 220, .4); 
+	display: flex;
+	padding: 8px;
+	overflow: hidden;
+}
+
+.popup-hide {
+	display: none;
+}
+
+.exit {
+	position: absolute;
+	right: 4px;
+	top: 4px;
+	padding: 6px;
+	cursor: pointer;
+	color: white;	
+}
+
+.popup-img, .popup-desc {
+	width: 50%;
+	height: 100%;
+}
+
+.popup-img {
+	background-color: rgb(var(--bg2));
+	border-radius: 8px;
+}
+
+.popup-desc {
+	display: flex;
+	flex-direction: column;
+}
+
+.bid-popup {
+	display: flex;
+	/*padding: 12px;*/
+}
+
+@media ( 980px > width > 600px) {
+	.sidebar {
+		width: 72px;
+		padding-right: 12px;
+	}
+	.sdb-logo {
+		/*padding: 0 24px;*/
+		align-self: center;
+	}
+
+	.sdb-option {
+		padding: 10px 24px;
+	}
+
+	.sdb-option > span:last-child {
+		display: none;
+	}
+
+	.sdb-logo > span:last-child {
+		display: none;
+	}
+
+	.dashboard-main {
+		width: calc(100% - 72px);
+	}
+
+}

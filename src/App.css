@@ -1,0 +1,34 @@
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  src: url('/PTSans-Regular.ttf');
+  font-family: PTSans;
+}
+
+@font-face {
+  src: url('/Oswald-VariableFont_wght.ttf');
+  font-family: Oswald;
+}
+
+html, body, #root {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app {
+  color: rgb(48, 48, 48);
+  font-family: Oswald;
+  --bg: 27, 27, 25;
+  --bg2: 40, 40, 35;
+  --bg-light: 70, 70, 65;
+  --primary: rgb(250, 250, 240);
+  --secondary: rgb(80, 80, 45);
+  --text: white;
+  --text-grey: 230, 230, 230;
+  --err: rgb(250, 100, 100);
+  --succ: rgb(130, 210, 130);
+}

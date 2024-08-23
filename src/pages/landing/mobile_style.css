@@ -1,0 +1,47 @@
+@media (max-width: 600px) {
+	.txt-tmpl-hdr-item {
+		display: none;
+	}
+
+	.txt-tmpl-cnt {
+		padding: 0 8%;
+		padding-top: 68px;
+	}
+
+	.txt-tmpl-cnt > div:nth-child(2) {
+		text-align: center;
+	}
+
+	.txt-tmpl-cnt > div:first-child {
+		font-size: 5.2rem;
+	}
+
+	.img-tmpl-1 > div:nth-child(1) {
+		width: 28%;
+		top: 12%;
+		left: 10%;
+		transform: rotate(-3deg);
+	}
+
+	.img-tmpl-1 > div:nth-child(2) {
+		width: 32%;
+		height: 24%;
+		bottom: 2%;
+		transform: rotate(-3deg);
+	}
+
+	.img-tmpl-1 > div:nth-child(3) {
+		width: 24%;
+		height: 14%;
+		top: 24%;
+		transform: rotate(3deg);
+	}
+
+	.img-tmpl-1 > div:nth-child(4) {
+		width: 20%;
+		height: 16%;
+		top: 32%;
+		right: 38%;
+	}
+
+}

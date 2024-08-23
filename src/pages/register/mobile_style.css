@@ -1,0 +1,32 @@
+@media (max-width: 600px) {
+	.logger-right {
+		display: none;
+	}
+
+	.logger-main {
+		width: 100%;
+		padding: 0 40px;
+		padding-top: 100px;
+	}
+
+	.reg-form {
+		width: 100%;
+	}
+
+	.back {
+		display: inline;
+		position: absolute;
+		top: 40px;
+		left: 40px;
+		padding: 4px 6px;
+		background-color: rgb(60, 60, 60, .3);
+		border-radius: 4px;
+	}
+
+	.reg-input > input, .reg-form > form > input {
+		/*background-color: transparent;*/
+		background-color: rgb(220, 220, 220);
+		border-radius: 4px;
+	}
+
+}

@@ -1,0 +1,99 @@
+@media (max-width: 600px) {
+	.index {
+		height: fit-content;
+	}
+
+	.index-top {
+		flex-direction: column;
+	}
+
+	.index-top-display {
+		width: 100%;
+	}
+
+	.index-ongoing-card {
+		display: none;
+	}
+
+	.hot-bids-cnt {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+		gap: 12px;
+	}
+
+	.hot-bids-card {
+		flex-direction: column;
+		height: 220px;
+		border-radius: 6px;
+		gap: 6px;
+	}
+
+	.hot-bids-img {
+		width: 100%;
+		height: 60%;
+	}
+
+	.hot-bids-details {
+		width: 100%;
+		height: 40%;
+	}
+
+	.hot-bid-fav {
+		display: none;
+	}
+
+	.hot-bid-fav-mbl {
+		position: absolute;
+		width: 24px;
+		height: 24px;
+		top: 14px;
+		right: 20px;
+		/*border: 1px solid white;*/
+		background-color: rgb(var(--bg2));
+		box-shadow: 1px 1px 1px 1px rgb(220, 220, 220, .2);
+		font-size: .8rem;
+		border-radius: 4px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		z-index: 2;
+		color: rgb(220, 220, 220, .5);
+	}
+
+	.fav {
+		color: rgb(250, 90, 90);
+	}
+
+	.hot-bids-details-cnt {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+	.hot-bids-details-cnt > span:first-child {
+		display: none;
+	}
+
+	.ongoing-highest-bid {
+		align-items: flex-end;
+	}
+
+	.top-collections {
+		height: fit-content;
+	}
+
+	.top-collections-cnt {
+		display: grid;
+		gap: 12px;
+		grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+	}
+
+	.tp-cllt-card {
+		width: 100%;
+		height: 128px;
+	}
+
+}
